@@ -20,5 +20,5 @@
 #X connect 4 0 2 0;
 #X connect 4 1 3 0;
 #X restore 24 94 pd open;
-#X msg 24 71 0autopreset_help.pd;
+#X msg 24 71 0autopreset-help.pd;
 #X connect 7 0 6 0;

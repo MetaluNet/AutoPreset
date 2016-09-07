@@ -17,7 +17,7 @@ You need following externals :
 --------------------------------
 
 ###help :
-Open `0autopreset_help.pd` for help and examples.
+Open `0autopreset-help.pd` for help and examples.
 
 AutoPreset is a simple state saving system (like rradical/ssad, among other ones). It aims to be simple and yet powerful.
 

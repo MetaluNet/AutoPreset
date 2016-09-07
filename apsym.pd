@@ -107,7 +107,7 @@ load the preset.;
 #X connect 4 0 2 0;
 #X connect 4 1 3 0;
 #X restore 632 85 pd open;
-#X msg 632 62 0autopreset_help.pd;
+#X msg 632 62 0autopreset-help.pd;
 #X obj 399 92 route _nbpattern_;
 #X obj 399 114 list prepend _nbpattern_;
 #X obj 399 133 list trim;

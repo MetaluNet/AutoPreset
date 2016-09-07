@@ -132,7 +132,7 @@ commands store/load. If pat_no_all==2 \, no pattern for this.;
 #X connect 4 0 2 0;
 #X connect 4 1 3 0;
 #X restore 715 72 pd open;
-#X msg 715 49 0autopreset_help.pd;
+#X msg 715 49 0autopreset-help.pd;
 #X obj 413 95 route _nbpattern_;
 #X obj 413 115 list prepend _nbpattern_;
 #X obj 413 134 list trim;
