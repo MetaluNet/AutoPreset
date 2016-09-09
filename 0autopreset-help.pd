@@ -1,4 +1,4 @@
-#N canvas 530 388 242 321 10;
+#N canvas 528 421 242 321 10;
 #X declare -stdpath moonlib;
 #X declare -lib moonlib;
 #X declare -stdpath zexy;
@@ -14,7 +14,7 @@
 #X declare -stdpath iemlib;
 #X declare -lib iemlib;
 #X declare -stdpath extra/iemlib;
-#N canvas 727 89 442 646 Introduction 0;
+#N canvas 725 94 442 646 Introduction 0;
 #X text 68 18 Welcome to AutoPreset abstractions !;
 #X text 49 288 2) the number of "patterns" (16 by default);
 #X text 33 358 There are 3 types of base objects :;
@@ -47,7 +47,7 @@ A "preset" is composed of :;
 #X text 33 507 Finally \, some utility abstractions are provided to
 help manipulating preset files and patterns.;
 #X restore 36 50 pd Introduction;
-#N canvas 402 311 330 244 Basic 0;
+#N canvas 400 344 330 244 Basic 0;
 #X obj 20 72 bng 15 250 50 0 empty empty load 17 7 0 10 -4034 -1 -1
 ;
 #X obj 197 68 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
@@ -56,17 +56,17 @@ help manipulating preset files and patterns.;
 #X obj 20 95 apmasterfile Basic p/basic.txt;
 #X obj 107 171 nbx 7 25 -1e+37 1e+37 0 0 empty empty MyFloat 0 -8 0
 16 -204786 -1 -1 3.14159 256;
-#X obj 20 30 apmaster Basic;
 #X text 21 212 Change MyFloat's value \, then reload.;
 #X obj 61 136 apf Basic MyFloat;
 #X text 54 6 Store/recall state to/from disk :;
+#X obj 20 30 apmaster Basic;
 #X connect 0 0 3 0;
 #X connect 1 0 3 1;
 #X connect 2 0 0 0;
-#X connect 4 0 7 0;
-#X connect 7 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 4 0;
 #X restore 36 76 pd Basic;
-#N canvas 774 415 337 358 Patterns 0;
+#N canvas 772 408 337 358 Patterns 0;
 #X obj 13 69 bng 15 250 50 0 empty empty load 17 7 0 10 -4034 -1 -1
 ;
 #X obj 244 69 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
@@ -103,7 +103,7 @@ help manipulating preset files and patterns.;
 #X text 16 156 apf understands float pattern:;
 #X text 16 170 it interpolates between two following patterns.;
 #X obj 20 108 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 12700 1;
+-1 -1 191 1;
 #X obj 243 54 bng 15 250 50 0 empty empty load 17 7 0 10 -4034 -1 -1
 ;
 #X obj 486 55 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
@@ -116,7 +116,7 @@ help manipulating preset files and patterns.;
 #X msg 17 52 _all_ load \$1;
 #X msg 139 53 _all_ store \$1;
 #X obj 215 108 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 12250 1;
+-1 -1 12509 1;
 #X msg 18 232 _all_ load \$1;
 #X floatatom 18 211 5 0 0 0 - - -, f 5;
 #X obj 22 337 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262130
@@ -126,7 +126,7 @@ help manipulating preset files and patterns.;
 #X obj 270 199 cnv 15 250 110 empty empty additionnal_related_object:
 5 8 0 11 -233017 -66577 0;
 #X obj 280 261 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 9700 1;
+-1 -1 6700 1;
 #X obj 276 219 cnv 15 120 20 empty empty empty 20 8 0 14 -225271 -66577
 0;
 #X text 279 219 api: for float;
@@ -135,17 +135,17 @@ help manipulating preset files and patterns.;
 ;
 #X text 64 356 interpolate between patterns 0 and 3 :;
 #X obj 23 439 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262130
--1 -1 19900 1;
+-1 -1 0 1;
 #X floatatom 20 458 5 0 0 0 - - -, f 5;
 #X obj 20 479 presetfadelin 2 0 1 3;
 #X obj 20 604 list prepend _all_;
 #X obj 20 629 list trim;
 #X obj 44 521 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262130
--1 -1 19100 1;
+-1 -1 0 1;
 #X floatatom 41 540 5 0 0 0 - - -, f 5;
 #X obj 41 561 presetfadecos 2 0 1 3;
 #X obj 283 517 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262130
--1 -1 10627 1;
+-1 -1 0 1;
 #X floatatom 280 536 5 0 0 0 - - -, f 5;
 #X obj 280 472 line;
 #X obj 280 494 wrap;
@@ -164,11 +164,11 @@ help manipulating preset files and patterns.;
 #X obj 19 397 s \$0-FloatPatterns-pattern-snd;
 #X obj 20 653 s \$0-FloatPatterns-pattern-snd;
 #X text 187 6 Interpolation :;
-#X obj 16 9 apmaster \$0-FloatPatterns;
 #X obj 17 127 apf \$0-FloatPatterns MyFloat1;
 #X obj 212 127 apf \$0-FloatPatterns MyFloat2;
+#X obj 16 9 apmaster \$0-FloatPatterns;
 #X connect 0 0 13 0;
-#X connect 3 0 52 0;
+#X connect 3 0 51 0;
 #X connect 4 0 45 0;
 #X connect 5 0 45 1;
 #X connect 6 0 4 0;
@@ -176,7 +176,7 @@ help manipulating preset files and patterns.;
 #X connect 8 0 10 0;
 #X connect 9 0 44 0;
 #X connect 10 0 44 0;
-#X connect 11 0 53 0;
+#X connect 11 0 52 0;
 #X connect 12 0 46 0;
 #X connect 13 0 12 0;
 #X connect 14 0 15 0;
@@ -199,12 +199,12 @@ help manipulating preset files and patterns.;
 #X connect 41 0 27 0;
 #X connect 42 0 34 0;
 #X connect 47 0 18 0;
-#X connect 52 0 3 0;
-#X connect 53 0 11 0;
+#X connect 51 0 3 0;
+#X connect 52 0 11 0;
 #X restore 36 157 pd FloatPatterns;
-#N canvas 654 128 603 581 ParameterTypes 0;
+#N canvas 650 138 603 581 ParameterTypes 0;
 #X obj 159 142 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 11000 1;
+-1 -1 1700 1;
 #X msg 175 462 set 0 un deux trois;
 #X msg 318 462 set 0 one two three;
 #X msg 123 485 dump;
@@ -260,9 +260,9 @@ help manipulating preset files and patterns.;
 #X obj 19 463 r \$0-Types-pattern-snd;
 #X text 220 416 ([sarray] is a moonlib's external);
 #X text 158 11 Several parameter types :;
-#X obj 23 15 apmaster \$0-Types;
 #X obj 156 160 apf \$0-Types MyFloat;
-#X connect 0 0 46 0;
+#X obj 23 15 apmaster \$0-Types;
+#X connect 0 0 45 0;
 #X connect 1 0 5 0;
 #X connect 2 0 5 0;
 #X connect 3 0 5 0;
@@ -290,7 +290,7 @@ help manipulating preset files and patterns.;
 #X connect 35 0 5 0;
 #X connect 39 0 8 0;
 #X connect 42 0 31 0;
-#X connect 46 0 0 0;
+#X connect 45 0 0 0;
 #X restore 36 130 pd ParameterTypes;
 #N canvas 695 150 410 394 SendReceive 0;
 #X obj 32 81 bng 15 250 50 0 empty empty load 17 7 0 10 -4034 -1 -1
@@ -309,13 +309,13 @@ and \$0-MyFloat-rcv) :;
 #X text 33 314 (open properties panel to see how send/receive channels
 are configurated);
 #X text 49 10 Less wires :;
-#X obj 32 36 apmaster \$0-SendReceive;
 #X obj 36 213 apf \$0-SendReceive MyFloat \$0-MyFloat;
+#X obj 32 36 apmaster \$0-SendReceive;
 #X connect 0 0 4 0;
 #X connect 1 0 4 1;
 #X connect 2 0 0 0;
 #X restore 36 213 pd SendReceive;
-#N canvas 517 145 756 752 More... 0;
+#N canvas 515 82 756 684 More... 0;
 #X obj 230 64 bng 15 250 50 0 empty empty load 17 7 0 10 -4034 -1 -1
 ;
 #X obj 413 65 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
@@ -412,10 +412,10 @@ are configurated);
 #X obj 409 346 loadbang;
 #X obj 409 387 apgetref \$0-More absA;
 #X text 43 15 Stuff and tricks :;
-#X obj 295 43 apmaster \$0-More;
 #X obj 32 166 apf \$0-More f1 \$0-f1 1;
 #X obj 407 168 apf \$0-More f2 \$0-f2 2;
 #X obj 31 262 apf \$0-More f3 \$0-f3 0 1;
+#X obj 295 43 apmaster \$0-More;
 #X connect 0 0 8 0;
 #X connect 1 0 8 1;
 #X connect 2 0 0 0;
@@ -466,7 +466,7 @@ are configurated);
 #X connect 73 0 32 0;
 #X connect 74 0 31 0;
 #X restore 36 241 pd More...;
-#N canvas 553 128 656 663 SubMaster 0;
+#N canvas 543 82 656 663 SubMaster 0;
 #X obj 253 64 bng 15 250 50 0 empty empty load 17 7 0 10 -4034 -1 -1
 ;
 #X obj 436 65 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
@@ -516,13 +516,13 @@ same abstraction :;
 #X msg 409 616 subgroup1 absC f2 load \$1;
 #X msg 334 491 absB _pat_all_follow_ \$1;
 #X obj 334 512 s \$0-Subs-setap-snd;
-#X obj 334 472 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 334 472 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 299 451 You can disconnect a subreference from master patterns
 :;
 #X text 148 11 Subgroups :;
-#X obj 26 19 apmaster \$0-Subs;
 #X obj 64 223 apf \$0-subgroup1 MyFloat1;
+#X obj 26 19 apmaster \$0-Subs;
 #X connect 0 0 9 0;
 #X connect 1 0 9 1;
 #X connect 2 0 0 0;
@@ -530,7 +530,7 @@ same abstraction :;
 #X connect 4 0 6 0;
 #X connect 5 0 8 0;
 #X connect 6 0 8 0;
-#X connect 10 0 42 0;
+#X connect 10 0 41 0;
 #X connect 13 0 15 0;
 #X connect 14 0 16 0;
 #X connect 15 0 14 0;
@@ -545,7 +545,7 @@ same abstraction :;
 #X connect 35 0 19 0;
 #X connect 36 0 37 0;
 #X connect 38 0 36 0;
-#X connect 42 0 10 0;
+#X connect 41 0 10 0;
 #X restore 36 185 pd SubMaster;
 #X text 61 5 AutoPreset Help page;
 #X obj 60 283 apdeclare;
