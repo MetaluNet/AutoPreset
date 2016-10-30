@@ -1,4 +1,5 @@
 #N canvas 533 82 577 615 10;
+#X declare -lib libdir -lib ggee;
 #X obj 350 449 s \$1-getap-snd;
 #X obj 450 452 r \$1-getap-rcv;
 #X obj 404 234 s \$1-setap-snd;
@@ -89,6 +90,7 @@
 #X obj 450 544 list trim;
 #X obj 18 310 splitpath;
 #X obj 289 349 splitpath;
+#X obj 50 611 declare -lib libdir -lib ggee;
 #X connect 1 0 18 0;
 #X connect 3 0 11 0;
 #X connect 4 0 11 0;

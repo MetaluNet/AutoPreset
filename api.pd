@@ -1,4 +1,5 @@
 #N canvas 274 75 947 566 10;
+#X declare -lib libdir -lib ggee -lib moonlib;
 #X obj 403 497 s \$3-rcv;
 #X obj 292 94 r \$1-setap-snd;
 #X obj 29 74 r \$1-getap-snd;
@@ -118,6 +119,7 @@ load the preset.;
 #X obj 511 147 f \$4;
 #X obj 206 208 list trim;
 #X obj 683 119 spigot 1;
+#X obj 18 514 declare -lib libdir -lib ggee -lib moonlib;
 #X connect 1 0 22 0;
 #X connect 2 0 7 0;
 #X connect 3 0 7 0;

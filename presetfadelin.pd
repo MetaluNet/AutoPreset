@@ -1,4 +1,5 @@
 #N canvas 783 98 403 375 10;
+#X declare -lib libdir -lib iemlib -lib iemlib/iemlib2;
 #X text 30 9 presetfade p1 p2 p3... : fade [0:1] to [p1:p2] \, [p2
 p3]...;
 #X obj 34 41 inlet fade [0:1];
@@ -37,6 +38,7 @@ p3]...;
 #X msg 101 196 set -1;
 #X connect 1 0 6 0;
 #X connect 1 0 30 0;
+#X obj 45 384 declare -lib libdir -lib iemlib -lib iemlib/iemlib2;
 #X connect 2 0 4 0;
 #X connect 2 0 18 0;
 #X connect 3 0 2 0;

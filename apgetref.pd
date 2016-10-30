@@ -1,4 +1,5 @@
 #N canvas 428 170 346 317 10;
+#X declare -lib libdir -lib iemlib -lib iemlib/iemlib2;
 #X obj 37 251 r \$0-rcv;
 #X obj 76 37 loadbang;
 #X obj 37 291 outlet;
@@ -16,6 +17,7 @@
 #X obj 76 81 list split 1;
 #X obj 58 133 t a;
 #X obj 37 155 list;
+#X obj 21 331 declare -lib libdir -lib iemlib -lib iemlib/iemlib2;
 #X connect 0 0 5 0;
 #X connect 1 0 12 0;
 #X connect 3 0 6 0;

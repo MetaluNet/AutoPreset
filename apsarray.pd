@@ -1,4 +1,6 @@
 #N canvas 69 83 902 629 10;
+#X declare -lib libdir -lib ggee -lib moonlib -stdpath moonlib -stdpath
+extra/moonlib;
 #X obj 290 106 r \$1-setap-snd;
 #X obj 34 106 r \$1-getap-snd;
 #X obj 13 104 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
@@ -138,6 +140,8 @@ commands store/load. If pat_no_all==2 \, no pattern for this.;
 #X obj 613 376 list append;
 #X obj 613 398 list trim;
 #X obj 481 471 list prepend;
+#X obj 22 590 declare -lib libdir -lib ggee -lib moonlib -stdpath moonlib
+-stdpath extra/moonlib;
 #X connect 0 0 15 0;
 #X connect 1 0 29 0;
 #X connect 2 0 29 0;
