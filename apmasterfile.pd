@@ -1,4 +1,5 @@
 #N canvas 657 54 316 197 10;
+#X declare -lib libdir -lib ggee;
 #X obj 25 158 s \$1-apmaster-rcv;
 #X obj 25 79 getdir 1;
 #X obj 25 103 list append \$2;
@@ -11,6 +12,7 @@
 #X msg 157 132 savefile \$1/\$2;
 #X text 16 2 usage : apmasterfile Ref filename;
 #X text 16 24 File utility for apmaster.;
+#X obj 26 194 declare -lib libdir -lib ggee;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;

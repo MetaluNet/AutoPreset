@@ -1,4 +1,5 @@
 #N canvas 32 117 984 535 10;
+#X declare -lib libdir -lib ggee;
 #X obj 286 97 r \$1-setap-snd;
 #X obj 27 73 r \$1-getap-snd;
 #X obj 6 71 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1 -1
@@ -120,6 +121,7 @@ commands store/load. If pat_no_all==2 \, no pattern for this.;
 #X obj 733 351 array set \$3;
 #X obj 386 448 array set \$3;
 #X obj 441 421 array set \$0-pattern;
+#X obj 392 495 declare -lib libdir -lib ggee;
 #X connect 0 0 20 0;
 #X connect 1 0 37 0;
 #X connect 2 0 37 0;
