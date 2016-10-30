@@ -5,7 +5,7 @@ p3]...;
 #X obj 115 90 dollarg;
 #X obj 176 71 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 49 116 length;
+#X obj 49 116 list length;
 #X floatatom 251 91 5 0 0 0 - - -;
 #X obj 34 158 *;
 #X obj 34 185 t f f;
