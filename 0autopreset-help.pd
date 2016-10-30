@@ -1,19 +1,6 @@
 #N canvas 528 421 242 321 10;
-#X declare -stdpath moonlib;
-#X declare -lib moonlib;
-#X declare -stdpath zexy;
-#X declare -lib zexy;
-#X declare -stdpath hcs;
-#X declare -lib hcs;
-#X declare -stdpath ggee;
-#X declare -lib ggee;
-#X declare -stdpath extra/moonlib;
-#X declare -stdpath extra/zexy;
-#X declare -stdpath extra/hcs;
-#X declare -stdpath extra/ggee;
-#X declare -stdpath iemlib;
-#X declare -lib iemlib;
-#X declare -stdpath extra/iemlib;
+#X declare -lib libdir -lib moonlib -stdpath moonlib -stdpath extra/moonlib
+;
 #N canvas 725 94 442 646 Introduction 0;
 #X text 68 18 Welcome to AutoPreset abstractions !;
 #X text 49 288 2) the number of "patterns" (16 by default);
@@ -548,5 +535,6 @@ same abstraction :;
 #X connect 41 0 10 0;
 #X restore 36 185 pd SubMaster;
 #X text 61 5 AutoPreset Help page;
-#X obj 60 283 apdeclare;
+#X obj 17 312 declare -lib libdir -lib moonlib -stdpath moonlib -stdpath
+extra/moonlib;
 #X text 15 298 Moonix::Antoine Rousseau 2004-2015;
