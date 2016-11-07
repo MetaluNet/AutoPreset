@@ -8,8 +8,6 @@ Simple state saving for PureData
 You need following externals :
 
 -	moonlib
--	zexy
--	hcs
 -	iemlib
 -	ggee
 
@@ -31,7 +29,7 @@ There are 3 main objects :
 
 
 --------------------------------
-	Antoine Rousseau 2004-2015
+	Antoine Rousseau 2004-2016
 license : GNU GPL (see [LICENSE.txt](LICENSE.txt)) 
 get last version there: <https://github.com/MetaluNet/AutoPreset>
 
