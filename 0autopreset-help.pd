@@ -1,7 +1,7 @@
-#N canvas 76 439 333 330 10;
-#X declare -lib libdir -lib moonlib -stdpath moonlib -stdpath extra/moonlib
-;
-#N canvas 721 102 485 645 Introduction 1;
+#N canvas 76 493 333 330 10;
+#X declare -lib moonlib -stdpath moonlib -stdpath extra/moonlib -path
+moonlib;
+#N canvas 721 102 485 645 Introduction 0;
 #X text 68 18 Welcome to AutoPreset abstractions !;
 #X text 49 288 2) the number of "patterns" (16 by default);
 #X text 33 358 There are 3 types of base objects :;
@@ -34,7 +34,7 @@ help manipulating preset files and patterns.;
 #X text 39 581 WARNING : AutoPreset needs following externals : moonlib
 \, iemlib \, ggee., f 50;
 #X restore 36 50 pd Introduction;
-#N canvas 390 499 330 244 Basic 0;
+#N canvas 390 607 330 244 Basic 0;
 #X obj 20 72 bng 15 250 50 0 empty empty load 17 7 0 10 -4034 -1 -1
 ;
 #X obj 197 68 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
@@ -53,7 +53,7 @@ help manipulating preset files and patterns.;
 #X connect 4 0 6 0;
 #X connect 6 0 4 0;
 #X restore 36 76 pd Basic;
-#N canvas 768 470 337 358 Patterns 0;
+#N canvas 768 517 337 358 Patterns 0;
 #X obj 13 69 bng 15 250 50 0 empty empty load 17 7 0 10 -4034 -1 -1
 ;
 #X obj 244 69 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
@@ -84,13 +84,13 @@ help manipulating preset files and patterns.;
 #X connect 7 0 10 0;
 #X connect 13 0 3 0;
 #X restore 36 103 pd Patterns;
-#N canvas 641 144 616 678 FloatPatterns 0;
+#N canvas 641 144 616 688 FloatPatterns 0;
 #X obj 21 192 hsl 200 15 0 3 0 0 empty empty empty -2 -6 0 8 -225271
 -1 -1 0 1;
 #X text 16 156 apf understands float pattern:;
 #X text 16 170 it interpolates between two following patterns.;
 #X obj 20 108 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 12700 1;
+-1 -1 191 1;
 #X obj 253 53 bng 15 250 50 0 empty empty load 17 7 0 10 -4034 -1 -1
 ;
 #X obj 496 54 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
@@ -103,17 +103,17 @@ help manipulating preset files and patterns.;
 #X msg 17 52 _all_ load \$1;
 #X msg 139 53 _all_ store \$1;
 #X obj 244 107 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 12700 1;
+-1 -1 12509 1;
 #X msg 18 232 _all_ load \$1;
-#X floatatom 18 211 5 0 0 0 - - -, f 5;
+#X floatatom 18 211 5 0 0 0 - - -;
 #X obj 22 337 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262130
 -1 -1 0 1;
-#X floatatom 19 356 5 0 0 0 - - -, f 5;
+#X floatatom 19 356 5 0 0 0 - - -;
 #X msg 19 376 _all_ A 0 \, _all_ B 3 \, _all_ pos \$1;
 #X obj 270 199 cnv 15 250 110 empty empty additionnal_related_object:
 5 8 0 11 -233017 -66577 0;
 #X obj 280 261 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 9700 1;
+-1 -1 6700 1;
 #X obj 276 219 cnv 15 120 20 empty empty empty 20 8 0 14 -225271 -66577
 0;
 #X text 279 219 api: for float;
@@ -123,17 +123,17 @@ help manipulating preset files and patterns.;
 #X text 64 356 interpolate between patterns 0 and 3 :;
 #X obj 23 439 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262130
 -1 -1 0 1;
-#X floatatom 20 458 5 0 0 0 - - -, f 5;
+#X floatatom 20 458 5 0 0 0 - - -;
 #X obj 20 479 presetfadelin 2 0 1 3;
 #X obj 20 604 list prepend _all_;
 #X obj 20 629 list trim;
 #X obj 44 521 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262130
--1 -1 19900 1;
-#X floatatom 41 540 5 0 0 0 - - -, f 5;
+-1 -1 0 1;
+#X floatatom 41 540 5 0 0 0 - - -;
 #X obj 41 561 presetfadecos 2 0 1 3;
 #X obj 313 507 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262130
 -1 -1 0 1;
-#X floatatom 310 526 5 0 0 0 - - -, f 5;
+#X floatatom 310 526 5 0 0 0 - - -;
 #X obj 310 462 line;
 #X obj 310 484 wrap;
 #X msg 400 439 stop;
@@ -199,7 +199,7 @@ help manipulating preset files and patterns.;
 #X obj 222 502 sarray \$0-MySarray 3;
 #X obj 19 549 del 1;
 #X obj 19 528 b;
-#X symbolatom 171 261 10 0 0 0 - - -, f 10;
+#X symbolatom 171 261 10 0 0 0 - - -;
 #X msg 160 219 one;
 #X obj 171 239 symbol;
 #X msg 227 219 trois;
@@ -249,8 +249,8 @@ help manipulating preset files and patterns.;
 #X text 158 11 Several parameter types :;
 #X obj 156 160 apf \$0-Types MyFloat;
 #X obj 23 15 apmaster \$0-Types;
-#X obj 100 582 declare -lib libdir -lib moonlib -stdpath moonlib -stdpath
-extra/moonlib;
+#X obj 100 582 declare -lib moonlib -stdpath moonlib -stdpath extra/moonlib
+-path moonlib;
 #X connect 0 0 45 0;
 #X connect 1 0 5 0;
 #X connect 2 0 5 0;
@@ -339,7 +339,7 @@ are configurated);
 #X msg 574 186 f2 load \$1;
 #X msg 649 187 f2 store \$1;
 #X obj 45 286 nbx 5 20 -1e+37 1e+37 0 0 \$0-f3-snd \$0-f3-rcv f3 -15
-10 0 12 -204786 -1 -1 1 256;
+10 0 12 -204786 -1 -1 0 256;
 #X obj 45 310 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 46 216 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -348,18 +348,18 @@ are configurated);
 -1 -1;
 #X obj 244 363 ap_testabs \$0-More absA;
 #X obj 44 390 apgetval \$0-More f3;
-#X floatatom 44 411 5 0 0 0 - - -, f 5;
+#X floatatom 44 411 5 0 0 0 - - -;
 #X msg 44 363 get;
 #X msg 74 363 set -100;
-#X symbolatom 425 412 20 0 0 0 - - -, f 20;
+#X symbolatom 425 412 20 0 0 0 - - -;
 #X obj 425 367 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 143 363 f3;
 #X msg 174 363 absA f1;
 #X text 11 340 ACCESS FROM/TO INDIVIDUAL PARAMETERS AND SUBREFS :;
 #X obj 43 440 r \$0-More-sndap;
-#X floatatom 166 509 5 0 0 0 - - -, f 5;
-#X floatatom 43 484 5 0 0 0 - - -, f 5;
+#X floatatom 166 509 5 0 0 0 - - -;
+#X floatatom 43 484 5 0 0 0 - - -;
 #X obj 254 470 tgl 15 0 empty empty enable_upload 17 4 1 10 -62784
 -241291 -62784 0 1;
 #X msg 254 489 absA _upload_ \$1;
@@ -368,9 +368,9 @@ are configurated);
 \, you have to enable "upload" for this subreference :;
 #X obj 43 461 route f1 f2 f3 absA;
 #X obj 166 487 route f1 f2;
-#X floatatom 201 508 5 0 0 0 - - -, f 5;
-#X floatatom 79 484 5 0 0 0 - - -, f 5;
-#X floatatom 115 484 5 0 0 0 - - -, f 5;
+#X floatatom 201 508 5 0 0 0 - - -;
+#X floatatom 79 484 5 0 0 0 - - -;
+#X floatatom 115 484 5 0 0 0 - - -;
 #X text 14 565 CHANGE THE NUMBER OF PATTERNS :;
 #X obj 30 610 s \$0-More-setap-snd;
 #X msg 27 637 17;
@@ -478,11 +478,11 @@ reference :;
 #X obj 69 469 hsl 150 15 0 3 0 0 empty empty empty -2 -6 0 8 -225271
 -1 -1 0 1;
 #X msg 66 509 _all_ load \$1;
-#X floatatom 66 488 5 0 0 0 - - -, f 5;
+#X floatatom 66 488 5 0 0 0 - - -;
 #X obj 66 529 s \$0-Subs-pattern-snd;
 #X obj 69 576 hsl 150 15 0 3 0 0 empty empty empty -2 -6 0 8 -225271
 -1 -1 0 1;
-#X floatatom 66 594 5 0 0 0 - - -, f 5;
+#X floatatom 66 594 5 0 0 0 - - -;
 #X obj 66 654 s \$0-Subs-pattern-snd;
 #X msg 66 615 absA load \$1;
 #X text 25 449 You can still use floatpattern feature :;
@@ -493,12 +493,12 @@ same abstraction :;
 #X text 267 396 (here absC is referenced to \$0-subgroup1);
 #X obj 249 576 hsl 150 15 0 3 0 0 empty empty empty -2 -6 0 8 -225271
 -1 -1 0 1;
-#X floatatom 246 595 5 0 0 0 - - -, f 5;
+#X floatatom 246 595 5 0 0 0 - - -;
 #X msg 246 616 subgroup1 load \$1;
 #X text 247 558 Only talk to subgroup1 :;
 #X obj 441 576 hsl 150 15 0 3 0 0 empty empty empty -2 -6 0 8 -225271
 -1 -1 0 1;
-#X floatatom 438 595 5 0 0 0 - - -, f 5;
+#X floatatom 438 595 5 0 0 0 - - -;
 #X obj 246 293 ap_testabs \$0-Subs absB;
 #X obj 65 378 ap_testabs \$0-subgroup1 absC;
 #X text 439 558 Talk to subgroup1/absC/f2 :;

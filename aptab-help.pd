@@ -1,5 +1,5 @@
 #N canvas 261 249 519 176 10;
-#X declare -lib libdir -lib ggee;
+#X declare -lib ggee -path ggee;
 #X text 66 70 Table is not included \;;
 #X text 120 29 -if pat_no_all==1 \, doesn't receive "_all_" pattern
 commands store/load. If pat_no_all==2 \, no pattern for this.;
@@ -10,14 +10,14 @@ commands store/load. If pat_no_all==2 \, no pattern for this.;
 ;
 #X obj 27 110 cnv 15 130 60 empty empty help: 20 7 0 12 -204800 -66577
 0;
-#N canvas 634 338 164 175 open 0;
+#N canvas 634 365 225 225 open 0;
 #X obj 29 16 inlet;
 #X obj 29 38 symbol;
 #X obj 29 103 pack s s;
 #X obj 56 80 getdir;
 #X obj 29 59 t s b;
 #X msg 29 124 \; pd open \$1 \$2;
-#X obj 18 164 declare -lib libdir -lib ggee;
+#X obj 18 164 declare -lib ggee -path ggee;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;

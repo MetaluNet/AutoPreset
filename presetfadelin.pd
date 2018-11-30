@@ -1,5 +1,5 @@
 #N canvas 779 106 494 420 10;
-#X declare -lib libdir -lib iemlib -lib iemlib/iemlib2 -stdpath iemlib
+#X declare -lib iemlib -lib iemlib/iemlib2 -stdpath iemlib -path iemlib
 ;
 #X text 30 9 presetfade p1 p2 p3... : fade [0:1] to [p1:p2] \, [p2
 p3]...;
@@ -28,8 +28,8 @@ p3]...;
 #X obj 100 155 b;
 #X obj 100 175 del 100;
 #X msg 100 196 set -1;
-#X obj 21 375 declare -lib libdir -lib iemlib -lib iemlib/iemlib2 -stdpath
-iemlib;
+#X obj 21 375 declare -lib iemlib -lib iemlib/iemlib2 -stdpath iemlib
+-path iemlib;
 #X connect 1 0 5 0;
 #X connect 1 0 22 0;
 #X connect 2 0 4 0;

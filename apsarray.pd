@@ -1,6 +1,6 @@
-#N canvas 289 80 902 629 10;
-#X declare -lib libdir -lib ggee -lib moonlib -stdpath moonlib -stdpath
-extra/moonlib;
+#N canvas 289 81 902 629 10;
+#X declare -lib ggee -path ggee -lib moonlib -stdpath moonlib -stdpath
+extra/moonlib -path moonlib;
 #X obj 34 106 r \$1-getap-snd;
 #X obj 13 104 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
@@ -140,10 +140,10 @@ commands store/load. If pat_no_all==2 \, no pattern for this.;
 #X text 26 2 AutoPreset Sarray;
 #X text 141 2 (for [moonlib/sarray]);
 #X text 78 67 Sarray is not included.;
-#X obj 22 590 declare -lib libdir -lib ggee -lib moonlib -stdpath moonlib
--stdpath extra/moonlib;
 #X obj 665 22 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 21 578 declare -lib ggee -path ggee -lib moonlib -stdpath moonlib
+-stdpath extra/moonlib -path moonlib;
 #X connect 0 0 11 0;
 #X connect 1 0 11 0;
 #X connect 3 0 4 0;
@@ -274,7 +274,7 @@ commands store/load. If pat_no_all==2 \, no pattern for this.;
 #X connect 110 0 111 0;
 #X connect 111 0 90 0;
 #X connect 114 0 113 0;
-#X connect 123 0 105 0;
-#X connect 123 0 107 0;
-#X connect 123 0 53 0;
-#X connect 123 0 55 0;
+#X connect 122 0 105 0;
+#X connect 122 0 107 0;
+#X connect 122 0 53 0;
+#X connect 122 0 55 0;

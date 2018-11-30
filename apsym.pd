@@ -1,6 +1,6 @@
 #N canvas 283 132 876 587 10;
-#X declare -lib libdir -lib ggee -lib moonlib -stdpath moonlib -stdpath
-extra/moonlib;
+#X declare -lib ggee -path ggee -lib moonlib -stdpath moonlib -stdpath
+extra/moonlib -path moonlib;
 #X obj 279 104 r \$1-setap-snd;
 #X obj 32 129 r \$1-getap-snd;
 #X obj 11 130 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
@@ -118,8 +118,8 @@ load the preset.;
 #X obj 564 228 list;
 #X obj 466 157 f \$4;
 #X obj 496 369 list trim;
-#X obj 22 500 declare -lib libdir -lib ggee -lib moonlib -stdpath moonlib
--stdpath extra/moonlib;
+#X obj 22 500 declare -lib ggee -path ggee -lib moonlib -stdpath moonlib
+-stdpath extra/moonlib -path moonlib;
 #X connect 0 0 12 0;
 #X connect 1 0 6 0;
 #X connect 2 0 6 0;
