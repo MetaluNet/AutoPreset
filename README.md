@@ -1,10 +1,10 @@
-#AutoPreset abstractions
+# AutoPreset abstractions
 
 Simple state saving for PureData
 
 --------------------------------
 
-###requirements :
+### requirements :
 You need following externals :
 
 -	moonlib
@@ -14,7 +14,7 @@ You need following externals :
 
 --------------------------------
 
-###help :
+### help :
 Open `0autopreset-help.pd` for help and examples.
 
 AutoPreset is a simple state saving system (like rradical/ssad, among other ones). It aims to be simple and yet powerful.
