@@ -1,5 +1,5 @@
-#N canvas 529 90 668 634 10;
-#X declare -lib ggee -path ggee -stdpath ggee;
+#N canvas 529 90 668 615 10;
+#X declare -path ggee;
 #X obj 356 449 s \$1-getap-snd;
 #X obj 472 447 r \$1-getap-rcv;
 #X obj 449 233 s \$1-setap-snd;
@@ -69,7 +69,7 @@
 ;
 #X obj 409 19 cnv 15 150 60 empty empty help: 20 7 0 12 -204800 -66577
 0;
-#N canvas 634 392 164 175 open 0;
+#N canvas 634 338 164 175 open 0;
 #X obj 29 16 inlet;
 #X obj 29 38 symbol;
 #X obj 29 103 pack s s;
@@ -90,7 +90,7 @@
 #X obj 472 539 list trim;
 #X obj 18 310 splitpath;
 #X obj 289 349 splitpath;
-#X obj 16 593 declare -lib ggee -path ggee -stdpath ggee;
+#X obj 16 593 declare -path ggee;
 #X connect 1 0 18 0;
 #X connect 3 0 11 0;
 #X connect 4 0 11 0;

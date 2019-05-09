@@ -1,5 +1,5 @@
-#N canvas 735 500 361 346 10;
-#X declare -lib iemlib -lib iemlib/iemlib2;
+#N canvas 735 442 361 326 10;
+#X declare -path iemlib -lib iemlib -lib iemlib2;
 #X obj 33 261 r \$0-rcv;
 #X obj 33 285 outlet;
 #X obj 33 35 inlet;
@@ -18,7 +18,7 @@
 #X obj 214 151 list prepend;
 #X obj 271 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 21 306 declare -lib iemlib -lib iemlib/iemlib2;
+#X obj 21 306 declare -path iemlib -lib iemlib -lib iemlib2;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 3 0 11 0;

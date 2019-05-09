@@ -1,5 +1,5 @@
 #N canvas 271 83 947 588 10;
-#X declare -lib ggee -stdpath ggee -path ggee;
+#X declare -path ggee;
 #X obj 404 531 s \$3-rcv;
 #X obj 293 128 r \$1-setap-snd;
 #X obj 30 108 r \$1-getap-snd;
@@ -117,7 +117,7 @@ load the preset.;
 #X obj 684 153 spigot 1;
 #X text 21 6 AutoPreset Int;
 #X text 22 6 AutoPreset Int;
-#X obj 19 548 declare -lib ggee -stdpath ggee -path ggee;
+#X obj 19 548 declare -path ggee;
 #X connect 1 0 20 0;
 #X connect 2 0 7 0;
 #X connect 3 0 7 0;

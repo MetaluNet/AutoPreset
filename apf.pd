@@ -1,5 +1,5 @@
-#N canvas 374 130 1027 745 10;
-#X declare -lib ggee -path ggee -stdpath ggee;
+#N canvas 339 79 1027 689 10;
+#X declare -path ggee;
 #X obj 467 558 s \$3-rcv;
 #X obj 292 107 r \$1-setap-snd;
 #X obj 30 118 r \$1-getap-snd;
@@ -68,7 +68,7 @@ load the preset.;
 #X obj 463 199 != 1;
 #X obj 856 37 cnv 15 130 60 empty empty help: 20 7 0 12 -204800 -66577
 0;
-#N canvas 641 697 164 175 open 0;
+#N canvas 641 593 164 175 open 0;
 #X obj 29 16 inlet;
 #X obj 29 38 symbol;
 #X obj 29 103 pack s s;
@@ -128,7 +128,7 @@ load the preset.;
 #X obj 852 543 tabread \$1-\$2-pattern;
 #X obj 825 563 tabread \$1-\$2-pattern;
 #X obj 722 193 r \$1-\$2-nbpattern;
-#X obj 50 672 declare -lib ggee -path ggee -stdpath ggee;
+#X obj 50 672 declare -path ggee;
 #X connect 1 0 17 0;
 #X connect 2 0 7 0;
 #X connect 3 0 7 0;

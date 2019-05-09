@@ -1,5 +1,5 @@
-#N canvas 293 254 984 535 10;
-#X declare -lib ggee -path ggee -stdpath ggee;
+#N canvas 293 233 984 535 10;
+#X declare -path ggee;
 #X obj 286 97 r \$1-setap-snd;
 #X obj 27 73 r \$1-getap-snd;
 #X obj 6 71 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1 -1
@@ -72,7 +72,7 @@ commands store/load. If pat_no_all==2 \, no pattern for this.;
 #X obj 286 358 spigot 1;
 #X obj 710 32 cnv 15 130 60 empty empty help: 20 7 0 12 -204800 -66577
 0;
-#N canvas 632 453 164 175 open 0;
+#N canvas 632 507 164 175 open 0;
 #X obj 29 16 inlet;
 #X obj 29 38 symbol;
 #X obj 29 103 pack s s;
@@ -121,7 +121,7 @@ commands store/load. If pat_no_all==2 \, no pattern for this.;
 #X obj 733 351 array set \$3;
 #X obj 386 448 array set \$3;
 #X obj 441 421 array set \$1-\$2-pattern;
-#X obj 392 495 declare -lib ggee -path ggee -stdpath ggee;
+#X obj 392 495 declare -path ggee;
 #X connect 0 0 20 0;
 #X connect 1 0 37 0;
 #X connect 2 0 37 0;
